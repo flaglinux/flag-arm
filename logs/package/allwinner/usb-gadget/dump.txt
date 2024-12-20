@@ -1,0 +1,19 @@
+/home/ubuntu/workspace/flag-arm/build/board.mk:10: /home/ubuntu/workspace/flag-arm/target/allwinner/-common/BoardConfigCommon.mk: No such file or directory
+/home/ubuntu/workspace/flag-arm/build/board.mk:11: /home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk: No such file or directory
+Package: usb-gadget
+Version: 1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Allwinner
+Title: tina usb gadget mass storage module
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   tina usb gadget mass storaget module
+
+@@
+
+make[2]: *** No rule to make target '/home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk'.  Stop.

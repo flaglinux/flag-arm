@@ -1,0 +1,26 @@
+/home/ubuntu/workspace/flag-arm/build/board.mk:10: /home/ubuntu/workspace/flag-arm/target/allwinner/-common/BoardConfigCommon.mk: No such file or directory
+/home/ubuntu/workspace/flag-arm/build/board.mk:11: /home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk: No such file or directory
+Package: busybox-init-base-files
+Menu: 1
+Version: 167-1734681645
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +SIGNED_PACKAGES:usign @SYSTEM_INIT_BUSYBOX
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: usign/host
+Section: base
+Category: Base system
+Title: Busybox init base system
+Maintainer: 
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:  This package contains a busybox init base filesystem and system scripts for OpenWrt.
+http://openwrt.org/
+
+@@
+Config:
+	source "package/busybox-init-base-files/Config.in"
+@@
+
+make[2]: *** No rule to make target '/home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk'.  Stop.

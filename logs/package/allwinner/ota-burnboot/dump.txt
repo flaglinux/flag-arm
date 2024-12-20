@@ -1,0 +1,24 @@
+/home/ubuntu/workspace/flag-arm/build/board.mk:10: /home/ubuntu/workspace/flag-arm/target/allwinner/-common/BoardConfigCommon.mk: No such file or directory
+/home/ubuntu/workspace/flag-arm/build/board.mk:11: /home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk: No such file or directory
+Package: ota-burnboot
+Version: 0.1-0.1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread libc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Allwinner
+Title: burn boot0/uboot for ota.
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   This package is used for ota to burn boot0/uboot.
+
+  Contains:
+   - ota-burnboot0
+   - ota-burnuboot
+   - libota-burnboot.so
+
+@@
+
+make[2]: *** No rule to make target '/home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk'.  Stop.

@@ -1,0 +1,37 @@
+/home/ubuntu/workspace/flag-arm/build/board.mk:10: /home/ubuntu/workspace/flag-arm/target/allwinner/-common/BoardConfigCommon.mk: No such file or directory
+/home/ubuntu/workspace/flag-arm/build/board.mk:11: /home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk: No such file or directory
+Package: btmanager-core
+Submenu: btmanager
+Version: 2.1.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +alsa-lib +bluez-daemon +glib2 +sbc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Allwinner
+Title: bluetooth manager core
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	bluetooth manager
+
+@@
+
+Package: btmanager-demo
+Submenu: btmanager
+Version: 2.1.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +btmanager-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Allwinner
+Title: Tina btmanager app demo
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	Tina btmanager app demo
+
+@@
+
+make[2]: *** No rule to make target '/home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk'.  Stop.

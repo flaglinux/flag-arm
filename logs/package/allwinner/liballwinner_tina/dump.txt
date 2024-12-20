@@ -1,0 +1,36 @@
+/home/ubuntu/workspace/flag-arm/build/board.mk:10: /home/ubuntu/workspace/flag-arm/target/allwinner/-common/BoardConfigCommon.mk: No such file or directory
+/home/ubuntu/workspace/flag-arm/build/board.mk:11: /home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk: No such file or directory
+Package: liballwinner
+Version: 1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libopenssl +libstdcpp +zlib +alsa-lib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Allwinner
+Title: CedarX2.6  for allwinner
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	CedarX2.6
+
+@@
+
+Package: jpegdecodedemo_old
+Submenu: liballwinner_tina_demo
+Version: 1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +liballwinner
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Allwinner
+Title: decode jpeg demo which use CedarX2.6 interface
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	CedarX2.6 tina jpeg decode
+
+@@
+
+make[2]: *** No rule to make target '/home/ubuntu/workspace/flag-arm/target/allwinner//BoardConfig.mk'.  Stop.
