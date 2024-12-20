@@ -1,5 +1,5 @@
 .config.*
 .DS_Store
 out/*
-tmp/*
-logs/*
+tmp
+logs
