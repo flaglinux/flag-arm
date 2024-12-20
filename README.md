@@ -12,14 +12,11 @@
 ## Directory Structure
 ```
 .
-├── bin/                # Essential binaries
 ├── build/              # Build scripts and intermediate files
 ├── config/             # Configuration files for the build system
 ├── device/             # Device-specific configurations
 ├── dl/                 # Downloaded source files
 ├── docs/               # Documentation and resources
-├── etc/                # Configuration files for runtime
-├── lib/                # Shared libraries
 ├── lichee/             # Lichee development components
 │   ├── brandy/         # Bootloader-related files
 │   └── linux-4.9/      # Kernel sources
@@ -30,9 +27,7 @@
 ├── softwinner/         # Platform-specific drivers and tools
 ├── target/             # Target-specific files and configurations
 ├── toolchain/          # Compilers and toolchain binaries
-├── tools/              # Utilities and additional tools
-├── usr/                # User binaries and data
-└── var/                # Variable data files
+└── tools/              # Utilities and additional tools
 ```
 
 ## Getting Started
