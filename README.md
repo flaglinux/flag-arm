@@ -1,6 +1,6 @@
 # Flag Linux
 
-![Flag Linux Logo](./docs/flag_linux_logo.png)
+![Flag Linux Logo](./docs/flag_linux_logo.png =300x)
 
 **Flag Linux** is a lightweight Linux distribution designed specifically for AI edge devices. It is tailored to provide a streamlined, efficient, and robust operating system for AI-driven applications and situational awareness tasks.
 
