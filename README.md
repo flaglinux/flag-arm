@@ -13,10 +13,24 @@
 ```
 .
 ├── bin/                # Essential binaries
+├── build/              # Build scripts and intermediate files
+├── config/             # Configuration files for the build system
+├── device/             # Device-specific configurations
+├── dl/                 # Downloaded source files
 ├── docs/               # Documentation and resources
-│   └── flag_linux_logo.png
-├── etc/                # Configuration files
+├── etc/                # Configuration files for runtime
 ├── lib/                # Shared libraries
+├── lichee/             # Lichee development components
+│   ├── brandy/         # Bootloader-related files
+│   └── linux-4.9/      # Kernel sources
+├── manifest/           # Build manifest and metadata
+├── package/            # Packages and custom software
+├── prebuilt/           # Prebuilt binaries and components
+├── scripts/            # Helper scripts for building and maintenance
+├── softwinner/         # Platform-specific drivers and tools
+├── target/             # Target-specific files and configurations
+├── toolchain/          # Compilers and toolchain binaries
+├── tools/              # Utilities and additional tools
 ├── usr/                # User binaries and data
 └── var/                # Variable data files
 ```
