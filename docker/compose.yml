@@ -1,0 +1,16 @@
+version: '2'
+services:
+  flag:
+    container_name: flag
+    image: flab/flag-arm:1.0
+    # Uncomment the following lines if you're using a Mac and need to mount a persistent volume
+    # volumes:
+    #   - /Volumes/FlagWorkspace:/home/ubuntu/workspace
+
+# For Mac users:
+# To prepare a case-sensitive volume, follow these steps:
+# 1. Create a sparse disk image with a case-sensitive file system:
+#    hdiutil create -type SPARSE -fs 'Case-sensitive APFS' -size 50g -volname FlagWorkspace ~/FlagWorkspace.dmg
+# 2. Mount the sparse image:
+#    hdiutil attach ~/FlagWorkspace.dmg.sparseimage
+# 3. After mounting, uncomment the volume mount in the configuration above.
