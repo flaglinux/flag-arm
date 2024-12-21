@@ -32,20 +32,81 @@
 
 ## Getting Started
 ### Prerequisites
-- Compatible edge device with support for Linux
+- Lindenis v536 compatible edge device with support for Linux
 - Minimum of 256MB RAM
-- Storage of at least 500MB
+- Storage of at least 64MB
 
-### Installation
-1. Download the latest Flag Linux image.
-2. Flash the image onto your device using tools like `dd` or `balenaEtcher`:
+### Installation and Build Guide
+1. **Sync with the Latest Repository**  
+   Run the installation script to ensure your environment is up to date:  
    ```bash
-   sudo dd if=flag_linux.img of=/dev/sdX bs=4M status=progress
+   ./install.sh
    ```
-3. Boot your device with the newly flashed image.
+2. **Source Build Parameters and Utilities**  
+   Load the necessary build parameters and utility functions:  
+   ```bash
+   . ./source.sh
+   ```
+3. **Build the Kernel Image**  
+   Configure and build the kernel using the following commands:  
+   ```bash
+   make menuconfig
+   make kernel_menuconfig
+   make -j$(nproc)
+   pack
+   ```
+4. **Flash the Image**  
+   Follow the flashing instructions provided in the [Lindenis Wiki](http://wiki.lindeni.org/index.php/Lindenis_V536) to flash the built image onto your device.
+5. **Boot the Device**  
+   Power on your device with the newly flashed image and verify functionality.
 
-### Documentation
-Comprehensive documentation can be found in the `./docs` directory or on our [official website](#).
+### Target: Cam-AI Core
+The Core version of the Cam-AI project provides a comprehensive hardware and software SDK for camera AI solutions. This version is targeted at hobbyists, hardware enthusiasts, and developers looking to create situational awareness solutions using AI-enhanced motion detection. Below are the specifications and features provided in the Core version.
+
+#### Hardware Specifications
+- **Resolution**: Full HD (1920x1080) upgradable to 4K.
+- **Connectivity**:
+  - Wi-Fi or Ethernet.
+  - 1x USB (client-mode).
+- **Audio**:
+  - Audio Input and Output.
+- **Serial Interfaces**:
+  - UART, I2C, SPI.
+- **Power**:
+  - 5 VDC input or power-pack support.
+- **GPIO**:
+  - 2 input pins (protected).
+  - 2 output pins.
+
+#### Software Features
+- **Operating System**: Linux-based.
+- **Core Functionality**:
+  - Motion detection.
+  - Image and video capture.
+  - Upload captured data to a cloud target.
+  - [LuCI](https://openwrt.org/docs/guide-user/luci/luci.essentials)
+- **Development Support**:
+  - SDK for advanced customization.
+  - Web-based IDE for streamlined development.
+
+#### Client Interface
+- **Browser-Based Access**:
+  - Provides an HTTP (unencrypted) Web UI.
+- **Command-Line Interface (CLI)**: Available for advanced users.
+
+#### Target Audience
+- **Development Board Support**: Designed for hobbyists and developers from the Raspberry Pi (RPI) community and similar hardware enthusiasts.
+
+#### Photo Gallery
+| ![IMX317](./docs/photos/IMX317.jpg) | ![IMX415 (Board View)](./docs/photos/IMX415_BD.jpg) | ![V536 (Top View)](./docs/photos/V536_TOP.jpg) | ![IMX415 (Top View)](./docs/photos/IMX415_TOP.jpg) |
+|------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
+| IMX317                             | IMX415 (Board View)                         | V536 (Top View)                              | IMX415 (Top View)                          |
+| ![V536 (View 1)](./docs/photos/V536-1.jpg) | ![V536 (View 2)](./docs/photos/V536-2.jpg) | ![IMX415 (Bottom View)](./docs/photos/IMX415_BOTTOM.jpg) | ![V536 (Bottom View)](./docs/photos/V536_BTTOM.jpg) |
+| V536 (View 1)                      | V536 (View 2)                               | IMX415 (Bottom View)                         | V536 (Bottom View)                          |
+
+### References
+- http://wiki.lindeni.org/index.php/Lindenis_V536
+- https://www.cnx-software.com/2020/01/21/lindenis-v536-som-sbc-targets-4k-camera-applications/
 
 ## Contributing
 We welcome contributions! Please see our [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines on how to help improve Flag Linux.
