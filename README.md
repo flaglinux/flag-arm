@@ -94,9 +94,6 @@ The Core version of the Cam-AI project provides a comprehensive hardware and sof
   - Provides an HTTP (unencrypted) Web UI.
 - **Command-Line Interface (CLI)**: Available for advanced users.
 
-#### Target Audience
-- **Development Board Support**: Designed for hobbyists and developers from the Raspberry Pi (RPI) community and similar hardware enthusiasts.
-
 #### Photo Gallery
 | ![IMX317](./docs/photos/IMX317.jpg) | ![IMX415 (Board View)](./docs/photos/IMX415_BD.jpg) | ![V536 (Top View)](./docs/photos/V536_TOP.jpg) | ![IMX415 (Top View)](./docs/photos/IMX415_TOP.jpg) |
 |------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
