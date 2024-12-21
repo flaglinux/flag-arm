@@ -33,7 +33,7 @@
 ## Getting Started
 ### Prerequisites
 - Development (Host) System
-  - Ubuntu 18.04 (Bionic Beaver)
+  - Ubuntu 18.04 (Bionic Beaver), or the Dockerized SDK (recommended)
   - Minimum 2 GB RAM
   - At least 40GB of available storage
 - Target Hardware
