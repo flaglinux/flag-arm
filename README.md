@@ -45,7 +45,7 @@
 2. **Source Build Parameters and Utilities**  
    Load the necessary build parameters and utility functions:  
    ```bash
-   . ./source.sh
+   . source.sh
    ```
 3. **Build the Kernel Image**  
    Configure and build the kernel using the following commands:  
