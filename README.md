@@ -32,22 +32,32 @@
 
 ## Getting Started
 ### Prerequisites
-- Lindenis v536 compatible edge device with support for Linux
-- Minimum of 256MB RAM
-- Storage of at least 64MB
+- Development (Host) System
+  - Ubuntu 18.04 (Bionic Beaver)
+  - Minimum 2 GB RAM
+  - At least 40GB of available storage
+- Target Hardware
+  - Cam-AI Core, or any Lindenis v536-compatible edge device with Linux support
+  - Minimum 256 MB RAM
+  - At least 64MB of storage
 
 ### Installation and Build Guide
-1. **Sync with the Latest Repository**  
+1. **Clone the Repository**  
+   ```bash
+   git clone --branch release-camai_core https://github.com/flaglinux/flag-arm.git
+   cd flag-arm
+   ```
+2. **Update the Environment**  
    Run the installation script to ensure your environment is up to date:  
    ```bash
    ./install.sh
    ```
-2. **Source Build Parameters and Utilities**  
+3. **Source Build Parameters and Utility Fuctions**  
    Load the necessary build parameters and utility functions:  
    ```bash
    . source.sh
    ```
-3. **Build the Kernel Image**  
+4. **Build the Kernel Image**  
    Configure and build the kernel using the following commands:  
    ```bash
    make menuconfig
@@ -55,9 +65,9 @@
    make -j$(nproc)
    pack
    ```
-4. **Flash the Image**  
+5. **Flash the Image**  
    Follow the flashing instructions provided in the [Lindenis Wiki](http://wiki.lindeni.org/index.php/Lindenis_V536) to flash the built image onto your device.
-5. **Boot the Device**  
+6. **Boot the Device**  
    Power on your device with the newly flashed image and verify functionality.
 
 ### Target: Cam-AI Core
