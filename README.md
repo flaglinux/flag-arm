@@ -9,31 +9,10 @@
 - Supports hardware acceleration for AI workloads
 - Seamless integration with AI SDKs and tools
 
-## Directory Structure
-```
-.
-├── build/              # Build scripts and intermediate files
-├── config/             # Configuration files for the build system
-├── device/             # Device-specific configurations
-├── dl/                 # Downloaded source files
-├── docs/               # Documentation and resources
-├── lichee/             # Lichee development components
-│   ├── brandy/         # Bootloader-related files
-│   └── linux-4.9/      # Kernel sources
-├── manifest/           # Build manifest and metadata
-├── package/            # Packages and custom software
-├── prebuilt/           # Prebuilt binaries and components
-├── scripts/            # Helper scripts for building and maintenance
-├── softwinner/         # Platform-specific drivers and tools
-├── target/             # Target-specific files and configurations
-├── toolchain/          # Compilers and toolchain binaries
-└── tools/              # Utilities and additional tools
-```
-
 ## Getting Started
 ### Prerequisites
 - Development (Host) System
-  - Ubuntu 18.04 (Bionic Beaver), or the Dockerized SDK (recommended)
+  - Ubuntu 18.04 (Bionic Beaver), or the [Dockerized SDK](docker) (recommended)
   - Minimum 2 GB RAM
   - At least 40GB of available storage
 - Target Hardware
@@ -114,6 +93,27 @@ The Core version of the Cam-AI project provides a comprehensive hardware and sof
 ### References
 - http://wiki.lindeni.org/index.php/Lindenis_V536
 - https://www.cnx-software.com/2020/01/21/lindenis-v536-som-sbc-targets-4k-camera-applications/
+
+## Directory Structure
+```
+.
+├── build/              # Build scripts and intermediate files
+├── config/             # Configuration files for the build system
+├── device/             # Device-specific configurations
+├── dl/                 # Downloaded source files
+├── docs/               # Documentation and resources
+├── lichee/             # Lichee development components
+│   ├── brandy/         # Bootloader-related files
+│   └── linux-4.9/      # Kernel sources
+├── manifest/           # Build manifest and metadata
+├── package/            # Packages and custom software
+├── prebuilt/           # Prebuilt binaries and components
+├── scripts/            # Helper scripts for building and maintenance
+├── softwinner/         # Platform-specific drivers and tools
+├── target/             # Target-specific files and configurations
+├── toolchain/          # Compilers and toolchain binaries
+└── tools/              # Utilities and additional tools
+```
 
 ## Contributing
 We welcome contributions! Please see our [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines on how to help improve Flag Linux.
