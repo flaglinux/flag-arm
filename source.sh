@@ -70,7 +70,7 @@ pack(){
 
 
 # MAIN
-rm -rf ${TINA_TOP}/tmp
+#rm -rf ${TINA_TOP}/tmp
 
 # merge split files
 cd ${TINA_BUILD_TOP}/lichee/brandy/toolchain
