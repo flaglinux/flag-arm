@@ -1,4 +1,3 @@
-# Flag Linux
 <img src="./docs/flag_linux_logo.png" alt="Flag Linux" width="150px">
 
 **Flag Linux** is a lightweight Linux distribution designed specifically for AI edge devices. It is tailored to provide a streamlined, efficient, and robust operating system for AI-driven applications and situational awareness tasks.
@@ -27,12 +26,12 @@
    cd flag-arm
    ```
 2. **Update the Environment**  
-   Run the installation script to ensure your environment is up to date:  
+   Run the installation script to ensure your environment is up to date:
    ```bash
    ./install.sh
    ```
 3. **Source Build Parameters and Utility Fuctions**  
-   Load the necessary build parameters and utility functions:  
+   Load the necessary build parameters and utility functions:
    ```bash
    . source.sh
    ```
