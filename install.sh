@@ -7,9 +7,11 @@ BUILD_ROOT=$(pwd)
 git config --global http.postBuffer 524288000
 git config --global core.compression 9
 git config --global http.maxRequests 2
-
 # not crossing filesystem boundaries unless explicitly configured:
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+
+# required for Python2.7.15
+export SOURCE_DATE_EPOCH=$(date +%s)
 
 # Define all repositories and their paths
 repos="
