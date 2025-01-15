@@ -33,27 +33,21 @@ dl:lindenis-v536-dl
 
 # Clone each repository
 for repo in $repos; do
-    path=$(echo $repo | cut -d: -f1)
-    name=$(echo $repo | cut -d: -f2)
+  path=$(echo $repo | cut -d: -f1)
+  name=$(echo $repo | cut -d: -f2)
 
-    if [ -d "$path" ] && [ "$(ls -A "$path")" ]; then
-        # If directory exists and is not empty, pull the latest changes
-        echo "Directory $path exists and is not empty. Pulling latest changes..."
-        cd "$path"
-        git pull origin main
-        cd ${BUILD_ROOT}
-    else
-        # If directory doesn't exist or is empty, clone the repository
-        if [ -d "$path" ]; then
-            echo "Directory $path exists but is empty. Cloning repository..."
-        else
-            echo "Directory $path does not exist. Cloning repository..."
-        fi
-        git clone --depth 1 -b main ${GIT_ROOT}/$name.git $path
-        cd "$path"
-        git fetch --unshallow
-        cd ${BUILD_ROOT}
-    fi
+  if [ -d "$path" ] && [ "$(ls -A "$path")" ]; then
+    echo "Directory $path exists and is not empty. Pulling latest changes..."
+    cd "$path"
+    git pull origin main
+    cd ${BUILD_ROOT}
+  else
+    echo "Directory $path does not exist, or does exists but is empty. Cloning repository..."
+    git clone --depth 1 -b main ${GIT_ROOT}/$name.git $path
+    cd "$path"
+    git fetch --unshallow
+    cd ${BUILD_ROOT}
+  fi
 done
 
 # copy make artifacts to the build root path
