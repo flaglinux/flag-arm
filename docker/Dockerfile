@@ -17,6 +17,9 @@ RUN echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf.d/00-docker; \
   libc6:i386 libstdc++6:i386 zlib1g:i386; \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# speed-up for subsequent builds after small changes
+ENV CC="ccache gcc"
+
 # install older version of OpenSSL
 ENV OPENSSL_VERSION=1.0.2u \
   INSTALL_DIR=/usr/local/ssl
