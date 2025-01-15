@@ -36,18 +36,23 @@ for repo in $repos; do
     path=$(echo $repo | cut -d: -f1)
     name=$(echo $repo | cut -d: -f2)
 
-    if [ -d "$path" ]; then
-        # If directory exists, pull the latest changes
-        echo "Directory $path exists. Pulling latest changes..."
+    if [ -d "$path" ] && [ "$(ls -A "$path")" ]; then
+        # If directory exists and is not empty, pull the latest changes
+        echo "Directory $path exists and is not empty. Pulling latest changes..."
         cd "$path"
         git pull origin main
         cd ${BUILD_ROOT}
     else
-        # If directory doesn't exist, clone the repository
-        echo "Directory $path does not exist. Cloning repository..."
-        #git clone -b main ${GIT_ROOT/$name.git $path
+        # If directory doesn't exist or is empty, clone the repository
+        if [ -d "$path" ]; then
+            echo "Directory $path exists but is empty. Cloning repository..."
+        else
+            echo "Directory $path does not exist. Cloning repository..."
+        fi
         git clone --depth 1 -b main ${GIT_ROOT}/$name.git $path
+        cd "$path"
         git fetch --unshallow
+        cd ${BUILD_ROOT}
     fi
 done
 
