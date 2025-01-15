@@ -4,7 +4,7 @@ services:
     container_name: flag
     image: flab/flag-arm:1.0
     volumes:
-      - ./flag:/home/ubuntu/workspace
+      - ~/flag:/home/ubuntu/workspace
       # or, uncomment the following lines if you're using a Mac and need a readily-mountable persistent volume
       #- /Volumes/FlagWorkspace:/home/ubuntu/workspace
 
